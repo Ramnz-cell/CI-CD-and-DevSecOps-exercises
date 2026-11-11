@@ -30,3 +30,6 @@ jobs:
 
       - name: Run unit tests
         run: dotnet test --no-build
+        
+      - name: Scan NuGet dependencies
+        run: dotnet package list --vulnerable --include-transitive
